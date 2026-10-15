@@ -1,0 +1,117 @@
+/* src/components/Header.css */
+.header {
+    background: var(--white);
+    border-bottom: 1px solid var(--light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo lado esquerdo */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary);
+    /* display: none; <- REMOVE ou comenta essa linha */
+}
+/* Ações lado direito */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.user-name {
+    font-size: 0.875rem;
+    color: var(--secondary);
+    /* display: none; <- REMOVE ou comenta essa linha */
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: transparent;
+    border: 1px solid var(--light);
+    border-radius: 8px;
+    color: var(--danger);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-logout:hover {
+    background: rgba(220, 53, 69, 0.1);
+    border-color: var(--danger);
+}
+
+.btn-logout:active {
+    transform: scale(0.98);
+}
+
+.btn-logout svg {
+    stroke-width: 2;
+}
+
+.btn-text {
+    display: none; /* Só ícone no mobile */
+}
+
+/* Tablet e Desktop */
+@media (min-width: 640px) {
+    .header-container {
+        padding: 1rem 1.5rem;
+    }
+
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-text {
+        display: block; /* Mostra texto da logo */
+        font-size: 1.25rem;
+    }
+
+    .user-name {
+        display: block; /* Mostra nome do user */
+    }
+
+    .btn-logout {
+        padding: 0.625rem 1rem;
+    }
+
+    .btn-text {
+        display: inline; /* Mostra texto "Sair" */
+    }
+}
+
+@media (min-width: 1024px) {
+    .header-container {
+        padding: 1rem 2rem;
+    }
+}

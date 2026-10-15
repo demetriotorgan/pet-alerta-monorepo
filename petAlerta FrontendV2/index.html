@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pet Alerta Frontend V1</title>
+</head>
+
+<body>    
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-brand"><img src="./img/logo.png" alt="">PetAlerta</div>
+            <div class="header-actions">
+                <a id="btn-ver-animais" href="index.html" class="btn-primary">Ver Animais</a>
+                <a id="btn-anunciar-pet" href="cadastro.html" class="btn-nav">Anunciar Pet</a>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <section class="dashboard-title-bar">
+                <button class="btn-menu-icon" aria-label="Abrir menu">
+                    <i class="ph ph-list"></i>
+                </button>
+                <h1>Encontre seu Amigo<span><i class="ph-duotone ph-paw-print"></i></h1>
+                <button class="btn-search-icon" aria-label="Buscar animais">
+                    <i class="ph ph-magnifying-glass"></i>
+                </button>
+            </section>
+
+            <section class="filters-container">
+                <h2>Filtros rápidos</h2>
+                <div class="filters-grid">
+                    <button class="filter-badge active">
+                        Perdidos <i class="ph ph-x"></i>
+                    </button>
+                    <button class="filter-badge">
+                        Achados <i class="ph ph-x"></i>
+                    </button>
+                    <button class="filter-badge">
+                        Cães <i class="ph ph-x"></i>
+                    </button>
+                    <button class="filter-badge">
+                        Gatos <i class="ph ph-x"></i>
+                    </button>
+                    <button class="filter-badge">
+                        Recentes <i class="ph ph-x"></i>
+                    </button>
+                </div>
+            </section>
+
+            <section class="pet-list">
+                
+            </section>              
+        </main>
+
+        <nav class="app-navbar">
+            <a href="#" class="nav-item active">
+                <i class="ph ph-house"></i>
+                <span class="label">Home</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="ph ph-plus-circle"></i>
+                <span class="label">Novo</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="ph ph-user"></i>
+                <span class="label">Perfil</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="ph ph-gear"></i>
+                <span class="label">Configurações</span>
+            </a>
+        </nav>
+
+    </div>
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>

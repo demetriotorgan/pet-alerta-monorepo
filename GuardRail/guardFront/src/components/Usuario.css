@@ -1,0 +1,195 @@
+/* src/components/Usuario.css */
+
+/* 1. Reset para todos elementos do componente */
+.usuario-page * {
+    box-sizing: border-box;
+}
+
+.usuario-page {
+    padding: var(--spacing-md);
+    font-family: var(--font-main);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.usuario-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) 0;
+    background: transparent;
+    border: none;
+    color: var(--secondary);
+    font-size: 0.875rem;
+    cursor: pointer;
+    margin-bottom: var(--spacing-md);
+}
+
+.btn-voltar:hover {
+    color: var(--primary);
+}
+
+.usuario-title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin: 0;
+}
+
+.usuario-title svg {
+    color: var(--primary);
+}
+
+.usuario-form { /* estava certo */
+    width: 100%;
+    background: var(--white);
+    padding: var(--spacing-lg); /* Aumenta de 10px pra ficar melhor */
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--light);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--light);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-family: var(--font-main);
+    transition: all 0.2s;
+    box-sizing: border-box; /* 2. Garante que padding não vaze */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+.form-group input:disabled,
+.form-group select:disabled {
+    background: var(--light);
+    cursor: not-allowed;
+}
+
+.input-error {
+    border-color: var(--danger)!important;
+}
+
+.error-text {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--danger);
+    margin-top: var(--spacing-xs);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: var(--spacing-xs);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    cursor: pointer;
+    font-weight: 500!important;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    box-sizing: content-box; /* checkbox não precisa de border-box */
+}
+
+.form-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.btn-cancelar,
+.btn-salvar {
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    font-family: var(--font-main);
+    box-sizing: border-box; /* 3. Botões também */
+}
+
+.btn-cancelar {
+    background: var(--light);
+    color: var(--secondary);
+}
+
+.btn-cancelar:hover:not(:disabled) {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.btn-salvar {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-salvar:hover:not(:disabled) {
+    background: var(--primary-dark);
+}
+
+.btn-salvar:disabled,
+.btn-cancelar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Tablet+ */
+@media (min-width: 640px) {
+   .usuario-page {
+        padding: var(--spacing-lg);
+    }
+
+   .usuario-title {
+        font-size: 1.75rem;
+    }
+
+   .usuario-form {
+        padding: var(--spacing-lg);
+    }
+
+   .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}

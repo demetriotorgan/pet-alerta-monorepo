@@ -1,0 +1,259 @@
+
+/* ===== Container da página ===== */
+
+.aprovar-pet {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    box-sizing: border-box;
+    color: #243247;
+    font-family: "Roboto", sans-serif;
+}
+
+.aprovar-pet h1 {
+    margin: 0 0 8px;
+    color: #2373F4;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.aprovar-pet .subtitulo {
+    margin: 0 0 24px;
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ===== Lista de pets ===== */
+
+.lista-pets {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===== Card individual ===== */
+
+.pet-card {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    padding: 16px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgb(15 23 42 / 5%);
+    transition:
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.pet-card:hover {
+    box-shadow: 0 8px 22px rgb(15 23 42 / 9%);
+}
+
+/* ===== Foto do animal ===== */
+
+.pet-card-foto {
+    display: block;
+    flex-shrink: 0;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    background-color: #f1f5f9;
+}
+
+/* ===== Conteúdo do card ===== */
+
+.pet-card-conteudo {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.pet-card-conteudo h2 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 1.25rem;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.pet-card-conteudo p {
+    margin: 0;
+    color: #475569;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.pet-card-conteudo strong {
+    color: #334155;
+    font-weight: 600;
+}
+
+/* ===== Status da moderação ===== */
+
+.pet-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.pet-status-pendente {
+    color: #92400e;
+    background-color: #fef3c7;
+}
+
+.pet-status-aprovado {
+    color: #166534;
+    background-color: #dcfce7;
+}
+
+.pet-status-rejeitado {
+    color: #991b1b;
+    background-color: #fee2e2;
+}
+
+/* ===== Botão de aprovação ===== */
+
+.pet-card-conteudo button {
+    margin-top: 8px;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 9px;
+    background-color: #2373F4;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.pet-card-conteudo button:hover {
+    background-color: #165dcc;
+}
+
+.pet-card-conteudo button:active {
+    transform: scale(0.98);
+}
+
+.pet-card-conteudo button:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+/* ===== Carregamento, erro e lista vazia ===== */
+
+.aprovar-pet-mensagem {
+    padding: 24px 16px;
+    color: #64748b;
+    text-align: center;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+.aprovar-pet-erro {
+    color: #b91c1c;
+    background-color: #fef2f2;
+    border-color: #fecaca;
+}
+
+/* ===== Responsividade: tablets e celulares ===== */
+
+@media (max-width: 600px) {
+    .aprovar-pet {
+        padding: 20px 12px;
+    }
+
+    .aprovar-pet h1 {
+        font-size: 1.4rem;
+    }
+
+    .pet-card {
+        flex-direction: column;
+        gap: 16px;
+        padding: 12px;
+    }
+
+    .pet-card-foto {
+        width: 100%;
+        height: 220px;
+    }
+
+    .pet-card-conteudo {
+        width: 100%;
+    }
+
+    .pet-card-conteudo button {
+        width: 100%;
+        min-height: 44px;
+    }
+}
+
+
+/* ===== Ações dos cards ===== */
+
+.pet-card-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.pet-card-acoes button {
+    margin-top: 0;
+    min-height: 44px;
+}
+
+/* ===== Botão Aprovar ===== */
+
+.pet-card-acoes .pet-btn-aprovar {
+    background-color: #2373F4;
+    color: #ffffff;
+}
+
+.pet-card-acoes .pet-btn-aprovar:hover:not(:disabled) {
+    background-color: #165dcc;
+}
+
+/* ===== Botão Excluir ===== */
+
+.pet-card-acoes .pet-btn-excluir {
+    background-color: #ffffff;
+    color: #dc2626;
+    border: 1px solid #dc2626;
+}
+
+.pet-card-acoes .pet-btn-excluir:hover {
+    background-color: #fef2f2;
+}
+
+.pet-card-acoes button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ===== Mensagem da página ===== */
+
+.aprovar-pet-feedback {
+    margin: 16px 0;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    overflow-wrap: anywhere;
+}
